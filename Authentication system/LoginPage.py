@@ -1,5 +1,8 @@
 from tkinter import *
 from PIL import ImageTk, Image  # pip install pillow 
+import mysql.connector
+import bcrypt
+
 
 class LoginForm:
     def __init__(self, window):
@@ -84,11 +87,11 @@ class LoginForm:
         self.login=Button(self.lgn_frame, text='Login',font=('Arial',13,'bold'),width=25,bd=1,cursor='hand2',bg='#3047ff',activebackground='#3047ff',fg='white')
         self.login.place(x=610,y=535,width=150)
     #=========Forget password=========#
-        self.forget_button=Button(self.lgn_frame,text='Forget password ?',font=('Arial',11,'bold underline'),width=50,bd=1,bg='#3047ff',fg='white')
+        self.forget_button=Button(self.lgn_frame,text='Forget password ?',font=('Arial',11,'bold'),width=50,bd=1,bg='#3047ff',fg='white')
         self.forget_button.place(x=750,y=580,width=200)
 
     #============sign up=====================#
-        self.sign_label=Button(self.lgn_frame,text='Sign_up',font=('Arial',11,'bold underline'),width=50,bd=1,bg='#3047ff',fg='white')   
+        self.sign_label=Button(self.lgn_frame,text='Sign_up',font=('Arial',11,'bold'),width=50,bd=1,bg='#3047ff',fg='white')   
         self.sign_label.place(x=500,y=580,width=200)
 
     #============show/hide password=============#    
